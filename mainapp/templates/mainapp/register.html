@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends "./base.html" %}
+
+<html>
+    <head></head>
+    <body>
+        {% block content %}
+            <form id="register_form" method="post">
+                {% csrf_token %}
+                <input name="first_name" type="text" placeholder="نام">
+                <input name="last_name" type="text" placeholder="نام خانوادگی">
+                <input name="username" type="text" placeholder="نام کاربری">
+                <input name="email" type="email" placeholder="ایمیل">
+                <input name="password1" type="password" placeholder="رمز عبور">
+                <input name="password2" type="password" placeholder="تکرار رمز عبور">
+                <button name="submit" type="submit">ارسال</button>
+            </form>
+        {% endblock %}
+    </body>
+</html>
+
